@@ -1,0 +1,13 @@
+DELETE http://localhost:3001/api/persons/del/633d0e340ea814285695a09f
+###
+GET http://localhost:3001/api/persons/
+###
+GET http://localhost:3001/api/persons/63394f5cb2a3aeed3c42b0f4
+###
+POST http://localhost:3001/api/persons/ HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Elon Reeve Musk",
+    "number": "11-344444444"
+}
