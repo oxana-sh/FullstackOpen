@@ -1,0 +1,39 @@
+{
+  "name": "blogs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node index.js",
+    "dev": "cross-env NODE_ENV=development nodemon index.js",
+    "test": "cross-env NODE_ENV=test jest --verbose --runInBand --forceExit",
+    "build:ui": "rm -rf build && cd C:/Alchemy/part2/phonebook && npm run build && cp -r build  ../../part4/phonebook_backend",
+    "deploy": "fly deploy --remote-only",
+    "deploy:full": "npm run build:ui && npm run deploy --remote-only",
+    "logs:prod": "fly logs",
+    "lint": "eslint ."
+  },
+  "author": "oxana shagova",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.1",
+    "express-async-errors": "^3.1.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.6.3",
+    "mongoose-unique-validator": "^3.1.0",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.24.0",
+    "jest": "^29.1.2",
+    "nodemon": "^2.0.20",
+    "supertest": "^6.3.0"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}

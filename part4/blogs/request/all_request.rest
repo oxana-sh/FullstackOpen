@@ -1,0 +1,40 @@
+GET http://localhost:3001/api/blogs
+###
+POST http://localhost:3001/api/blogs HTTP/1.1
+content-type: application/json
+authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvb3QiLCJpZCI6IjYzNGZmMDE3NjA2MjM4OTIxN2M3NTM1NSIsImlhdCI6MTY2NjI0NzA4OCwiZXhwIjoxNjY2MjUwNjg4fQ.Ko0lhxG97TZIpNHkkQ4BX6ZVWrf1tKFU62OJ2yFyqqY
+
+{
+    "title": "Studying NOT Abroad 12",
+    "author": "Beeling uapp Merda",
+    "url": "http://yandex.ru",
+    "likes": 5    
+}
+###
+DELETE http://localhost:3001/api/blogs/6350dbf94f5b3e25e6bc48af
+authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvb3QiLCJpZCI6IjYzNGZmMDE3NjA2MjM4OTIxN2M3NTM1NSIsImlhdCI6MTY2NjMyMTE4MSwiZXhwIjoxNjY2MzI0NzgxfQ.DJpoA7sHJCiQdHXKs2RmvLXZoLzm4MjTpinNhCkrOvU
+
+###
+PUT http://localhost:3001/api/blogs/634b8562b72241e2c1fce10c
+content-type: application/json
+
+{
+       "likes": 5
+}
+###
+POST http://localhost:3001/api/users HTTP/1.1
+content-type: application/json
+
+{
+    "username": "root1",
+    "name": "Superuser",
+    "password": "ferda15"
+}
+###
+POST http://localhost:3001/api/login HTTP/1.1
+content-type: application/json
+
+{
+    "username": "root",
+    "password": "ferda15"
+}
